@@ -80,15 +80,15 @@ public class MacAddressPlugin extends CordovaPlugin {
 
         if (action.equals("getEthernetMacAddress")) {
 
-            String macAddress = this.getEthernetMacAddress();
+            String macEAddress = this.getEthernetMacAddress();
 
-            if (macAddress != null) {
+            if (macEAddress != null) {
                 JSONObject JSONresult = new JSONObject();
                 try {
-                    JSONresult.put("mac", macAddress);
+                    JSONresult.put("mac", macEAddress);
                     PluginResult r = new PluginResult(PluginResult.Status.OK,
                             JSONresult);
-                    callbackContext.success(macAddress);
+                    callbackContext.success(macEAddress);
                     r.setKeepCallback(true);
                     callbackContext.sendPluginResult(r);
                     return true;
@@ -110,7 +110,7 @@ public class MacAddressPlugin extends CordovaPlugin {
             if (ipAddress != null) {
                 JSONObject JSONresult = new JSONObject();
                 try {
-                    JSONresult.put("ip", macAddress);
+                    JSONresult.put("ip", ipAddress);
                     PluginResult r = new PluginResult(PluginResult.Status.OK,
                             JSONresult);
                     callbackContext.success(ipAddress);
