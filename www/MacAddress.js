@@ -12,6 +12,16 @@
  	getMacAddress: function(successCallback, failureCallback){
  		cordova.exec(successCallback, failureCallback, 'MacAddressPlugin',
  			'getMacAddress', []);
+ 	},
+
+  getEthernetMacAddress: function(successCallback, failureCallback){
+ 		cordova.exec(successCallback, failureCallback, 'MacAddressPlugin',
+ 			'getEthernetMacAddress', []);
+ 	},
+
+  getIpAddress: function(successCallback, failureCallback){
+ 		cordova.exec(successCallback, failureCallback, 'MacAddressPlugin',
+ 			'getIpAddress', []);
  	}
  };
 
